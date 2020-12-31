@@ -9,7 +9,7 @@ describe("custom language", () => {
 		_findPath = Module._findPath;
 
 		Module._findPath = (request, paths, isMain) => {
-			if (request === "postcss-jsx") {
+			if (request === "@stylelint/postcss-css-in-js") {
 				return null;
 			}
 			return _findPath.apply(Module, [request, paths, isMain]);
